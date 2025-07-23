@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <img src="https://via.placeholder.com/150" alt="Profile Photo" class="profile-photo">
+                <div class="about-details">
+                    <h3><span class="animated-text"><span id="typing"></span></span></h3>
+                    <div class="video-intro">
+                        <video width="320" height="180" controls poster="https://via.placeholder.com/320x180">
+                            <source src="intro.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p>I am a passionate web developer with experience in building responsive and interactive websites. My expertise includes HTML, CSS, JavaScript, and modern frameworks. I love solving problems and turning ideas into reality through code.</p>
+                    <div class="skills-section">
+                        <h4>Skills</h4>
+                        <div class="skill-bar">
+                            <span>HTML5</span>
+                            <div class="bar"><div class="progress html"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>CSS3</span>
+                            <div class="bar"><div class="progress css"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>JavaScript</span>
+                            <div class="bar"><div class="progress js"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>React</span>
+                            <div class="bar"><div class="progress react"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>Node.js</span>
+                            <div class="bar"><div class="progress node"></div></div>
+                        </div>
+                    </div>
+                    <div class="about-links">
+                        <a href="#projects" class="btn">View My Projects</a>
+                        <a href="#contact" class="btn">Contact Me</a>
+                        <a href="resume.pdf" class="btn" download>Download Resume</a>
+                        <a href="vcard.vcf" class="btn" download>Download vCard</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/codergoler" target="_blank" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"></a>
+                        <a href="https://www.linkedin.com/in/shatabdi-thapa-3b1b591a2/" target="_blank" title="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"></a>
+                        <a href="mailto:shatabdithapa25@email.com" title="Email"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email"></a>
+                    </div>
+                    <div class="timeline">
+                        <h4>Experience & Education</h4>
+                        <ul>
+                            <li>
+                                <span class="timeline-date">2024 - 2024</span>
+                                <span class="timeline-content">social media handler in TOUREAST HOLIDAY Travel & Tour</span>
+                            </li>
+                           
+                            <li>
+                                <span class="timeline-date">2018 - 2023</span>
+                                <span class="timeline-content">Bachelor in Computer Application, Tribhuvan University</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fun-facts">
+                        <h4>Fun Facts</h4>
+                        <ul>
+                            <li>I play chess.</li>
+                            <li>I love rides.</li>
+                            <li>Coffee enthusiast.</li>
+                        </ul>
+                    </div>
+                    <div class="testimonials">
+                        <h4>Testimonials</h4>
+                        <div class="testimonial-carousel">
+                            <div class="testimonial active">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="gopal dhakal" class="testimonial-avatar">
+                                <div class="testimonial-content">
+                                    <div class="testimonial-quote"><span class="testimonial-quote-mark">“</span>A truly creative developer!<span class="testimonial-quote-mark">”</span></div>
+                                    <div class="testimonial-author">- gopal dhakal, Project Manager</div>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="babu chor" class="testimonial-avatar">
+                                <div class="testimonial-content">
+                                    <div class="testimonial-quote"><span class="testimonial-quote-mark">“</span>Always delivers on time and exceeds expectations.<span class="testimonial-quote-mark">”</span></div>
+                                    <div class="testimonial-author">- babu chor, Team Lead</div>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="roshan" class="testimonial-avatar">
+                                <div class="testimonial-content">
+                                    <div class="testimonial-quote"><span class="testimonial-quote-mark">“</span>Great communicator and problem solver.<span class="testimonial-quote-mark">”</span></div>
+                                    <div class="testimonial-author">- roshan, Designer</div>
+                                </div>
+                            </div>
+                            <button class="carousel-btn prev">&#8592;</button>
+                            <button class="carousel-btn next">&#8594;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="toggle-theme" class="btn theme-toggle">Toggle Light/Dark Mode</button>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-advanced-bar">
+                <input type="text" id="project-search" placeholder="Search projects..." />
+                <button class="filter-btn" id="featured-toggle">Show Featured Only</button>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="HTML5">HTML5</button>
+                <button class="filter-btn" data-filter="CSS3">CSS3</button>
+                <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+                <button class="filter-btn" data-filter="React">React</button>
+                <button class="filter-btn" data-filter="Node.js">Node.js</button>
+                <button class="filter-btn" data-filter="Express">Express</button>
+                <button class="filter-btn" data-filter="MongoDB">MongoDB</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured" data-title="Portfolio Website" data-description="A personal portfolio to showcase my work, skills, and contact information. Built with responsive design and interactive features." data-tech="HTML5, CSS3, JavaScript" data-demo="#" data-github="#" data-image="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" data-details="This project features a fully responsive layout, animated skill bars, and a contact form with validation. It is designed to be easily customizable and visually appealing." data-tags="HTML5,CSS3,JavaScript">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Portfolio Website" class="project-image">
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio to showcase my work, skills, and contact information. Built with responsive design and interactive features.</p>
+                        <div class="project-badges">
+                            <span class="badge">HTML5</span>
+                            <span class="badge">CSS3</span>
+                            <span class="badge">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn" target="_blank">Live Demo</a>
+                            <a href="#" class="btn" target="_blank">GitHub</a>
+                            <button class="btn details-btn">More Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-title="To-Do App" data-description="A simple and intuitive to-do list application to help users manage tasks efficiently. Features drag-and-drop and local storage." data-tech="React, CSS3" data-demo="#" data-github="#" data-image="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" data-details="This app allows users to add, edit, delete, and reorder tasks. It uses React hooks for state management and persists data in local storage for a seamless experience." data-tags="React,CSS3">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="To-Do App" class="project-image">
+                    <div class="project-content">
+                        <h3>To-Do App</h3>
+                        <p>A simple and intuitive to-do list application to help users manage tasks efficiently. Features drag-and-drop and local storage.</p>
+                        <div class="project-badges">
+                            <span class="badge">React</span>
+                            <span class="badge">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn" target="_blank">Live Demo</a>
+                            <a href="#" class="btn" target="_blank">GitHub</a>
+                            <button class="btn details-btn">More Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-title="Blog Platform" data-description="A full-featured blog platform with user authentication, markdown support, and a modern editor. Built for performance and scalability." data-tech="Node.js, Express, MongoDB" data-demo="#" data-github="#" data-image="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" data-details="This platform supports user registration, post creation with markdown, and a modern WYSIWYG editor. It is optimized for speed and security, and includes a RESTful API backend." data-tags="Node.js,Express,MongoDB">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Blog Platform" class="project-image">
+                    <div class="project-content">
+                        <h3>Blog Platform</h3>
+                        <p>A full-featured blog platform with user authentication, markdown support, and a modern editor. Built for performance and scalability.</p>
+                        <div class="project-badges">
+                            <span class="badge">Node.js</span>
+                            <span class="badge">Express</span>
+                            <span class="badge">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn" target="_blank">Live Demo</a>
+                            <a href="#" class="btn" target="_blank">GitHub</a>
+                            <button class="btn details-btn">More Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="project-modal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <img id="modal-image" src="" alt="Project Image" class="modal-image">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-description"></p>
+                    <div id="modal-badges"></div>
+                    <p id="modal-details"></p>
+                    <div class="modal-links">
+                        <a id="modal-demo" href="#" class="btn" target="_blank">Live Demo</a>
+                        <a id="modal-github" href="#" class="btn" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div id="contact-bg-anim"></div>
+            <h2>Contact</h2>
+            <div class="contact-info-cards">
+                <div class="contact-card" aria-label="Email">
+                    <span class="contact-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" stroke="none"/><path d="M4 4l8 8 8-8"/></svg></span>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value" id="contact-email">shatabdithapa25@gmail.com</span>
+                    <button class="copy-btn" aria-label="Copy email" title="Copy email to clipboard">Copy</button>
+                </div>
+                <div class="contact-card" aria-label="Phone">
+                    <span class="contact-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92V21a1 1 0 0 1-1.09 1A19.72 19.72 0 0 1 3 5.09 1 1 0 0 1 4 4h4.09a1 1 0 0 1 1 .75l1.13 4.52a1 1 0 0 1-.29 1L8.21 12.21a16 16 0 0 0 7.58 7.58l1.94-1.94a1 1 0 0 1 1-.29l4.52 1.13a1 1 0 0 1 .75 1V21z"/></svg></span>
+                    <span class="contact-label">Phone</span>
+                    <span class="contact-value">+977-9866418516</span>
+                </div>
+                <div class="contact-card" aria-label="Location">
+                    <span class="contact-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg></span>
+                    <span class="contact-label">Location</span>
+                    <span class="contact-value">Kathmandu, Nepal</span>
+                </div>
+            </div>
+            <div class="contact-socials">
+                <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub" class="contact-social"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"></a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn" class="contact-social"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"></a>
+                <a href="mailto:your@email.com" aria-label="Email" class="contact-social"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email"></a>
+            </div>
+            <form id="contactForm" class="contact-form" autocomplete="off" aria-label="Contact form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required aria-label="Name" />
+                    <label for="name">Name</label>
+                    <span class="form-error" id="error-name"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required aria-label="Email" />
+                    <label for="email">Email</label>
+                    <span class="form-error" id="error-email"></span>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required aria-label="Message"></textarea>
+                    <label for="message">Message</label>
+                    <span class="form-error" id="error-message"></span>
+                </div>
+                <button type="submit" class="btn">Send</button>
+                <div id="formMessage"></div>
+                <div id="formSuccessAnimation" class="success-animation" style="display:none;">
+                    <svg width="60" height="60" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="none" stroke="#61dafb" stroke-width="4"/><polyline points="18,32 28,42 44,22" fill="none" stroke="#61dafb" stroke-width="4"/></svg>
+                </div>
+            </form>
+            <div class="map-container">
+                <h4>Find Me Here</h4>
+                <div class="map-card">
+                    <div class="map-marker-overlay">
+                        <div class="map-marker-pulse"></div>
+                        <div class="map-marker"></div>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019019857246!2d-122.4194151846816!3d37.7749297797597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c7e2b1b1b%3A0x4a0b8b8b8b8b8b8b!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" width="100%" height="250" style="border:0; border-radius:14px; margin-top:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-location-details">
+                        <div class="map-location-title">Kathmandu, Nepal</div>
+                        <div class="map-location-desc">I am based in the heart of Nepal. Let’s connect for a coffee or a chat!</div>
+                        <a href="https://maps.app.goo.gl/fDwsDKGtD43Py7oUA" target="_blank" class="btn map-btn">Open in Google Maps</a>
+                    </div>
+                </div>
+            </div>
+            <!-- WhatsApp Floating Button -->
+            <a href="https://wa.me/12345678901" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+            </a>
+            <!-- Calendar Booking Floating Button -->
+            <a href="https://calendly.com/yourusername/meeting" class="calendar-float" target="_blank" aria-label="Book a meeting">
+                <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Calendar" />
+            </a>
+            <!-- Chatbot Widget -->
+            <div id="chatbot-widget" class="chatbot-widget">
+                <button id="chatbot-toggle" aria-label="Open chatbot">💬</button>
+                <div id="chatbot-window" class="chatbot-window" style="display:none;">
+                    <div class="chatbot-header">
+                        <img src="https://api.dicebear.com/7.x/bottts/svg?seed=AI" alt="Chatbot Avatar" class="chatbot-avatar" />
+                        Chatbot
+                        <button id="chatbot-close" aria-label="Close chatbot">×</button>
+                    </div>
+                    <div id="chatbot-messages" class="chatbot-messages">
+                        <div class="chatbot-msg bot">
+                            <img src="https://api.dicebear.com/7.x/bottts/svg?seed=AI" alt="Chatbot Avatar" class="chatbot-avatar-inline" />
+                            Hi! How can I help you today?
+                        </div>
+                    </div>
+                    <form id="chatbot-form" autocomplete="off">
+                        <input type="text" id="chatbot-input" placeholder="Type your message..." aria-label="Type your message" />
+                        <button type="submit">Send</button>
+                        <button type="button" id="chatbot-voice" aria-label="Voice input" title="Voice input">🎤</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo animated-bounce">🌟</span>
+                <span class="footer-title">My Portfolio</span>
+                <div class="footer-tagline">Building beautiful web experiences.</div>
+            </div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/codergoler" target="_blank" aria-label="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/shatabdi-thapa-3b1b591a2/" target="_blank" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"></a>
+                <a href="mailto:shatabdithapa25@email.com" aria-label="Email"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email"></a>
+            </div>
+            <form id="newsletter-form" class="footer-newsletter" autocomplete="off">
+                <label for="newsletter-email">Subscribe to newsletter</label>
+                <div class="newsletter-row">
+                    <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Your email" required />
+                    <button type="submit">Subscribe</button>
+                </div>
+                <span id="newsletter-message"></span>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="footer-year"></span> My Portfolio. All rights reserved.</span>
+            <button id="back-to-top" aria-label="Back to top">↑</button>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
