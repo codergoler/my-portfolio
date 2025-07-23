@@ -1857,9 +1857,113 @@ body.dark-mode .timeline {
 body.dark-mode .timeline-content {
     color: #bbb;
 }
-@media (max-width: 900px) {
-    .about-timelines {
-        flex-direction: column;
-        gap: 18px;
-    }
-} 
+
+/* ============ MOBILE RESPONSIVE FIXES ============ */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-details {
+    padding: 0 10px;
+  }
+
+  .video-intro video {
+    width: 100%;
+    height: auto;
+  }
+
+  .skill-bar span {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .bar {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .testimonial-carousel {
+    padding: 24px 16px;
+  }
+
+  .carousel-btn {
+    top: auto;
+    bottom: -20px;
+    transform: none;
+  }
+
+  .project-advanced-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .map-card iframe {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .map-location-details {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  footer .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer-links,
+  .footer-socials {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-newsletter {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 0.9em;
+  }
+
+  .footer-title {
+    font-size: 1.1em;
+  }
+}
