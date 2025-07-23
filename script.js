@@ -562,16 +562,34 @@ if (footerYear) {
     footerYear.textContent = new Date().getFullYear();
 } 
 
-// Add this to your script.js
-function adjustLayoutForMobile() {
+
+// Mobile-specific adjustments
+function handleMobileLayout() {
   if (window.innerWidth < 768) {
-    // Adjust any JS-dependent layouts here
-    document.querySelectorAll('.project-card').forEach(card => {
-      card.style.minWidth = '0';
+    // Adjust testimonial carousel for mobile
+    const testimonials = document.querySelectorAll('.testimonial');
+    testimonials.forEach(testimonial => {
+      testimonial.style.flexDirection = 'column';
+      testimonial.style.textAlign = 'center';
+    });
+
+    // Ensure all buttons have proper touch targets
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.style.minHeight = '44px';
+      btn.style.minWidth = '44px';
     });
   }
 }
 
 // Run on load and resize
-window.addEventListener('DOMContentLoaded', adjustLayoutForMobile);
-window.addEventListener('resize', adjustLayoutForMobile);
+window.addEventListener('DOMContentLoaded', handleMobileLayout);
+window.addEventListener('resize', handleMobileLayout);
+
+// Prevent zoom on form inputs
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.innerWidth < 768) {
+    document.querySelectorAll('input, select, textarea').forEach(el => {
+      el.style.fontSize = '16px';
+    });
+  }
+});
