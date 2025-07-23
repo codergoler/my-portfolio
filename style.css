@@ -1859,111 +1859,187 @@ body.dark-mode .timeline-content {
 }
 
 /* ============ MOBILE RESPONSIVE FIXES ============ */
+
+/*header and navigation*/
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 1.8em;
+  header {
+    padding: 15px 0;
   }
-
+  
   nav ul {
+    display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
+    margin-top: 10px;
   }
+  
+  nav ul li {
+    margin: 0;
+  }
+}
 
+/*About Section*/
+@media (max-width: 768px) {
   .about-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 20px;
   }
-
+  
   .profile-photo {
     width: 120px;
     height: 120px;
   }
-
-  .about-details {
-    padding: 0 10px;
+  
+  .skills-section {
+    text-align: left;
   }
-
-  .video-intro video {
-    width: 100%;
-    height: auto;
+  
+  .skill-bar {
+    display: flex;
+    flex-direction: column;
   }
-
-  .skill-bar span {
-    display: block;
-    margin-bottom: 4px;
-  }
-
+  
   .bar {
     width: 100%;
     margin-left: 0;
+    margin-top: 5px;
   }
+}
 
-  .testimonial-carousel {
-    padding: 24px 16px;
+/* Projects Section*/
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
-
-  .carousel-btn {
-    top: auto;
-    bottom: -20px;
-    transform: none;
+  
+  .project-card {
+    min-width: auto;
+    max-width: 100%;
   }
-
+  
   .project-advanced-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  #project-search {
+    width: 100%;
+  }
+  
+  .project-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Contact Section */
+@media (max-width: 768px) {
+  .contact-info-cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .contact-card {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .contact-form {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .map-container iframe {
+    height: 300px;
+  }
+}
+
+/* Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .footer-brand {
+    align-items: center;
+  }
+  
+  .footer-links {
     flex-direction: column;
     gap: 10px;
   }
-
-  .project-card {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .map-card iframe {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .map-location-details {
-    padding: 10px;
-    text-align: center;
-  }
-
-  .contact-form {
-    width: 100%;
-    padding: 20px 10px;
-  }
-
-  footer .footer-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 16px;
-  }
-
-  .footer-links,
-  .footer-socials {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
+  
   .footer-newsletter {
     width: 100%;
-    align-items: center;
+  }
+  
+  .newsletter-row {
+    flex-direction: column;
+  }
+  
+  .newsletter-row input {
+    width: 100%;
   }
 }
 
-@media (max-width: 480px) {
-  html {
-    font-size: 15px;
+/*floating elements*/
+@media (max-width: 768px) {
+  .whatsapp-float, 
+  .calendar-float {
+    width: 50px;
+    height: 50px;
+    right: 15px;
   }
-
-  .btn {
-    padding: 8px 14px;
-    font-size: 0.9em;
+  
+  .whatsapp-float {
+    bottom: 15px;
   }
-
-  .footer-title {
-    font-size: 1.1em;
+  
+  .calendar-float {
+    bottom: 80px;
+  }
+  
+  .chatbot-widget {
+    right: 15px;
+    bottom: 150px;
+  }
+  
+  .chatbot-window {
+    width: 280px;
   }
 }
+
+/*topography adjustment*/
+
+@media (max-width: 768px) {
+  :root {
+    --font-h1: 2em;
+    --font-h2: 1.6em;
+    --font-h3: 1.2em;
+  }
+  
+  h2::before {
+    display: none;
+  }
+}
+
+/*General Layout*/
+@media (max-width: 768px) {
+  main {
+    margin: 20px auto;
+    padding: 20px 15px;
+    width: calc(100% - 30px);
+  }
+  
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+  }
+}
+

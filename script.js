@@ -561,3 +561,17 @@ const footerYear = document.getElementById('footer-year');
 if (footerYear) {
     footerYear.textContent = new Date().getFullYear();
 } 
+
+// Add this to your script.js
+function adjustLayoutForMobile() {
+  if (window.innerWidth < 768) {
+    // Adjust any JS-dependent layouts here
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.style.minWidth = '0';
+    });
+  }
+}
+
+// Run on load and resize
+window.addEventListener('DOMContentLoaded', adjustLayoutForMobile);
+window.addEventListener('resize', adjustLayoutForMobile);
