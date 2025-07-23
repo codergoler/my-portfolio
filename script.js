@@ -593,3 +593,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// Function to check and fix any overflowing elements
+function fixOverflow() {
+  if (window.innerWidth < 768) {
+    // Find all elements that might cause overflow
+    document.querySelectorAll('*').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.right > window.innerWidth) {
+        // Apply fixes to overflowing elements
+        el.style.maxWidth = '100%';
+        el.style.overflow = 'hidden';
+        
+        // Special cases
+        if (el.classList.contains('project-card')) {
+          el.style.width = 'calc(100% - 16px)';
+        }
+        
+        if (el.classList.contains('testimonial-carousel')) {
+          el.style.padding = '16px';
+        }
+      }
+    });
+  }
+}
+
+// Run on load and resize
+window.addEventListener('DOMContentLoaded', fixOverflow);
+window.addEventListener('resize', fixOverflow);
+
+// Prevent zoom on form inputs (which can cause horizontal scroll)
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.innerWidth < 768) {
+    document.querySelectorAll('input, select, textarea').forEach(el => {
+      el.style.fontSize = '16px';
+    });
+  }
+});
